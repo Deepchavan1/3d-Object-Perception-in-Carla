@@ -1,0 +1,9 @@
+<launch>
+
+    <param name="image_topic_name" value="/carla/ego_vehicle/rgb_front/image" />
+    <param name="detect_pub_image_topic_name" value="/object/detected_image" />
+
+    <node name="image_topic_name" pkg="object_perception" type="main.py" />
+    <node name="detect_pub_image_topic_name" pkg="object_perception" type="main.py" />
+
+</launch>
