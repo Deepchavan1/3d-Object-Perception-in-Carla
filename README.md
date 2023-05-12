@@ -6,4 +6,14 @@ the geometric relationship of 3D and 2D perspectives to recover the dimension, l
 Installation of carla can be referred from [here](https://carla.readthedocs.io/en/latest/start_quickstart/). Now, install ros noetic for ubuntu. Follow [this](http://wiki.ros.org/ROS/Installation) for installing ros depending upon your requirements. Further for integration carla-ros-bridge refer [here](https://carla.readthedocs.io/en/latest/ros_documentation/). The ROS bridge enables two-way communication between ROS and CARLA. The information from the CARLA server is translated to ROS topics. In the same way, the messages sent between nodes in ROS get translated to commands to be applied in CARLA.
 ## Integration of 3D object detection in carla
 Create a catkin workspace and build this catkin workspace. Further create a package named object_perception which has rospy cv_bridge packages. Now, in scripts folder in src/object_perception put the code files in this repository except launch file. Build catkin workspace again.
-Now for crearting launch folder and place launch file in this folder
+Now for create launch folder and place launch file in this repository in launch folder.
+## Runing and visulizing the scripts
+Run carla using 
+```
+cd <carla root folder>
+./CarlaUE4.sh
+```
+Start carla-ros-bridge
+Launch object_perception file
+To visualize this, follow the steps bellow
+click on add and then on topic and in your topic name here object_perception select image. You will be able to see the outputs of 3d object detection using camera placed on carla vehicle.
