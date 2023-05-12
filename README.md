@@ -5,7 +5,7 @@ the geometric relationship of 3D and 2D perspectives to recover the dimension, l
 ## Carla-ros-bridge
 Installation of carla can be referred from [here](https://carla.readthedocs.io/en/latest/start_quickstart/). Now, install ros noetic for ubuntu. Follow [this](http://wiki.ros.org/ROS/Installation) for installing ros depending upon your requirements. Further for integration carla-ros-bridge refer [here](https://carla.readthedocs.io/projects/ros-bridge/en/latest/run_ros/). The ROS bridge enables two-way communication between ROS and CARLA. The information from the CARLA server is translated to ROS topics. In the same way, the messages sent between nodes in ROS get translated to commands to be applied in CARLA.
 ## Integration of 3D object detection in carla
-Create a catkin workspace and build this catkin workspace.
+Create a catkin [workspace](http://wiki.ros.org/catkin/Tutorials/create_a_workspace) and build this catkin workspace.
 ```
 cd catkin_ws
 catkin_make
