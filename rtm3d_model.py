@@ -27,7 +27,7 @@ class RTM3D:
         self.configs = {}
         self.configs['saved_fn'] = 'rtm3d'
         self.configs['arch'] = 'resnet_18'
-        self.configs['pretrained_path'] = '/home/dorleco/RTM3D/checkpoints/rtm3d_resnet_18/Complete_model_rtm3d_resnet_18_epoch_15.pth'
+        self.configs['pretrained_path'] = 'path to pretrained model'
         self.configs['head_conv'] = -1
         self.configs['K'] = 100
 
