@@ -32,51 +32,10 @@ class RTM3D:
         self.configs['K'] = 100
 
 
-        # parser.add_argument('--saved_fn', type=str, default='rtm3d', metavar='FN',
-        #                     help='The name using for saving logs, models,...')
-        # parser.add_argument('-a', '--arch', type=str, default='resnet_18', metavar='ARCH',
-        #                     help='The name of the model architecture')
-        # parser.add_argument('--pretrained_path', type=str, default="/home/dorleco/RTM3D/checkpoints/rtm3d_resnet_18/Complete_model_rtm3d_resnet_18_epoch_15.pth", metavar='PATH',
-        #                     help='the path of the pretrained checkpoint')
-        # parser.add_argument('--head_conv', type=int, default=-1,
-        #                     help='conv layer channels for output head'
-        #                         '0 for no conv layer'
-        #                         '-1 for default setting: '
-        #                         '64 for resnets and 256 for dla.')
-        # parser.add_argument('--K', type=int, default=100,
-        #                     help='the number of top K')
-
-
-
-
-        # parser.add_argument('--use_left_cam_prob', type=float, default=1.,
-        #                     help='The probability of using the left camera')
-        # parser.add_argument('--dynamic-sigma', action='store_true',
-        #                     help='If true, compute sigma based on Amax, Amin then generate heamap'
-        #                         'If false, compute radius as CenterNet did')
-        # parser.add_argument('--no_cuda', action='store_true',
-        #                     help='If true, cuda is not used.')
-        # parser.add_argument('--gpu_idx', default=0, type=int,
-        #                     help='GPU index to use.')
-
-
         self.configs['use_left_cam_prob'] = 1
         # self.configs['dynamic-sigma'] 
         self.configs['no_cuda'] = False
         self.configs['gpu_idx'] = 0
-
-
-
-
-        # parser.add_argument('--num_samples', type=int, default=None,
-        #                     help='Take a subset of the dataset to run and debug')
-        # parser.add_argument('--num_workers', type=int, default=1,
-        #                     help='Number of threads for loading data')
-        # parser.add_argument('--batch_size', type=int, default=1,
-        #                     help='mini-batch size (default: 4)')
-        # parser.add_argument('--peak_thresh', type=float, default=0.2)
-        # parser.add_argument('--show_image', action='store_true',
-        #                     help='If true, show the image during demostration')
 
 
         self.configs['num_samples'] = None
@@ -85,28 +44,11 @@ class RTM3D:
         self.configs['peak_thresh'] = 0.2
         self.configs['show_image'] = False
 
-
-
-
-        # parser.add_argument('--save_test_output', action='store_true', default=True,
-        #                     help='If true, the output image of the testing phase will be saved')
-        # parser.add_argument('--output_format', type=str, default='image', metavar='PATH',
-        #                     help='the type of the test output (support image or video)')
-        # parser.add_argument('--output_video_fn', type=str, default='out_rtm3d', metavar='PATH',
-        #                     help='the video filename if the output format is video')
-
         
         self.configs['save_test_output'] = True
         self.configs['output_format'] = 'image'
         self.configs['output_video_fn'] = 'out_rtm3d'
 
-
-
-
-        
-
-
-        # self.configs = edict(vars(parser.parse_args()))
         self.configs['pin_memory'] = True
         self.configs['distributed'] = False  # For testing on 1 GPU only
         self.configs['input_size'] = (384, 1280)
